@@ -58,13 +58,13 @@ node default {
   class { '::profiles::elastic::filebeat':
     filebeat_major_version => '6'
   }
-  ->
-  class { '::profiles::elastic::icingabeat':
-    icingabeat_version => lookup('elastic::icingabeat::version'),
-    kibana_version => lookup('elastic::kibana::version'),
-    elasticsearch_host => lookup('elastic::elasticsearch::listen_ip'),
-    elasticsearch_port => lookup('elastic::elasticsearch::listen_port'),
-    kibana_host => lookup('elastic::kibana::listen_ip'), # needed for dashboard provisioning
-    kibana_port => lookup('elastic::kibana::listen_port'),
-  }
+#  ->
+#  class { '::profiles::elastic::icingabeat':
+#    icingabeat_version => lookup('elastic::icingabeat::version'),
+#    kibana_version => lookup('elastic::kibana::version'),
+#    elasticsearch_host => lookup('elastic::elasticsearch::listen_ip'),
+#    elasticsearch_port => lookup('elastic::elasticsearch::listen_port'),
+#    kibana_host => lookup('elastic::kibana::listen_ip'), # needed for dashboard provisioning
+#    kibana_port => lookup('elastic::kibana::listen_port'),
+#  }
 }
